@@ -1,0 +1,23 @@
+.etch-a-sketch-container {
+  width: auto;
+  height: 100vh;
+}
+
+.row-canvas {
+  display: flex;
+  flex-direction: row;
+}
+
+.column-canvas {
+  display: flex;
+  flex-direction: column;
+}
+
+.canvas {
+  /* background-color: white; */
+  height: auto;
+  max-width: 200px;
+  padding: 20px;
+  margin: 1px;
+  border: solid 1px;
+}
