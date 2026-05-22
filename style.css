@@ -1,5 +1,5 @@
 body {
-  background-color: aliceblue;
+  background-color: antiquewhite;
 }
 
 .etch-a-sketch-container {
@@ -9,16 +9,14 @@ body {
   height: 100vh;
   border: 2px;
 }
-/**/
-/* .header { */
-/*   /* height: 20%; */ */
-/*   flex: 0 0 auto; */
-/*   padding-bottom: 5%; */
-/* } */
 
-.footer{
-  flex: 0 0 auto;
-  /* padding-top: 5%; */
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.canvas-button {
+  font-size: 128px;
 }
 
 .row-canvas {
@@ -35,6 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 40px;
   align-items: center;
   flex-wrap: nowrap;
   aspect-ratio: 1/1;

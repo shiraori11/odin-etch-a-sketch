@@ -54,12 +54,22 @@ const generateRandomColor = function() {
   return randomColor;
 }
 
-const sketchCanvasContainer = document.querySelector(".etch-a-sketch-container")
-const sketchCanvas = generateCanvasColumn(4);
-const headerDiv = document.createElement("div");
-const footerDiv = document.createElement("div");
+const changeCanvasSize = function() {
+  let canvasSize = prompt("Canvas Size 1 - 64");
 
-headerDiv.classList.add("header");
-footerDiv.classList.add("footer");
+  sketchCanvasContainer.innerHTML = "";
 
-sketchCanvasContainer.append(headerDiv, sketchCanvas, footerDiv);
+  resizedCanvasSize = generateCanvasColumn(canvasSize);
+
+  sketchCanvasContainer.append(resizedCanvasSize)
+}
+
+
+const sketchCanvasContainer = document.querySelector(".etch-a-sketch-container");
+const sketchCanvas = generateCanvasColumn(16);
+
+sketchCanvasContainer.append(sketchCanvas);
+
+const canvasSizeButton = document.querySelector(".canvas-button");
+
+canvasSizeButton.addEventListener("click", changeCanvasSize);
