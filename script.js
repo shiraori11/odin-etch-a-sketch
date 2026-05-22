@@ -5,7 +5,7 @@ const generateCanvasRow = function(canvasSize) {
   rowContainer.classList.add("row-canvas");
   for (let r = 0; r < canvasSize; r++) {
     const canvasBox = document.createElement("div");
-    canvasBox.addEventListener("click", changeColorOnHover);
+    canvasBox.addEventListener("mouseover", changeColorOnHover);
     canvasBox.classList.add("canvas");
     rowContainer.append(canvasBox);
   }
@@ -28,6 +28,6 @@ const changeColorOnHover = function(event) {
   event.target.style.backgroundColor = "black";
 }
 
-const sketchCanvas = generateCanvasColumn(16);
+const sketchCanvas = generateCanvasColumn(32);
 console.log(sketchCanvas);
 sketchCanvasContainer.appendChild(sketchCanvas);
