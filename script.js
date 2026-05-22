@@ -28,6 +28,11 @@ const changeColorOnHover = function(event) {
   event.target.style.backgroundColor = "black";
 }
 
-const sketchCanvas = generateCanvasColumn(32);
-console.log(sketchCanvas);
-sketchCanvasContainer.appendChild(sketchCanvas);
+const sketchCanvas = generateCanvasColumn(4);
+const headerDiv = document.createElement("div");
+const footerDiv = document.createElement("div");
+
+headerDiv.classList.add("header");
+footerDiv.classList.add("footer");
+
+sketchCanvasContainer.append(headerDiv, sketchCanvas, footerDiv);
