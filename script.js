@@ -57,6 +57,10 @@ const generateRandomColor = function() {
 const changeCanvasSize = function() {
   let canvasSize = prompt("Canvas Size 1 - 64");
 
+  while (canvasSize < 1 || canvasSize > 64) {
+    canvasSize = prompt("Size is too big or too small. Enter a size again.");
+  }
+
   sketchCanvasContainer.innerHTML = "";
 
   resizedCanvasSize = generateCanvasColumn(canvasSize);
